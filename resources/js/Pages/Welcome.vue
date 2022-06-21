@@ -1,6 +1,6 @@
 <script setup>
 import { Head } from '@inertiajs/inertia-vue3';
-import bg from '../../images/2395249.jpg'
+import bg from '../../images/2395249.webp'
 
 defineProps({
     canLogin: Boolean,

@@ -22573,7 +22573,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
-/* harmony import */ var _images_2395249_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../images/2395249.jpg */ "./resources/images/2395249.jpg");
+/* harmony import */ var _images_2395249_webp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../images/2395249.webp */ "./resources/images/2395249.webp");
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -22589,7 +22589,7 @@ __webpack_require__.r(__webpack_exports__);
     expose();
     var __returned__ = {
       Head: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.Head,
-      bg: _images_2395249_jpg__WEBPACK_IMPORTED_MODULE_1__["default"]
+      bg: _images_2395249_webp__WEBPACK_IMPORTED_MODULE_1__["default"]
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
       enumerable: false,
@@ -24221,10 +24221,10 @@ module.exports = deepmerge_1;
 
 /***/ }),
 
-/***/ "./resources/images/2395249.jpg":
-/*!**************************************!*\
-  !*** ./resources/images/2395249.jpg ***!
-  \**************************************/
+/***/ "./resources/images/2395249.webp":
+/*!***************************************!*\
+  !*** ./resources/images/2395249.webp ***!
+  \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -24232,7 +24232,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/2395249.jpg?dc70dc3a2b8415fca14f5310a4b8e70c");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/2395249.webp?10f2d6c57bf729720477d51effa14ee2");
 
 /***/ }),
 
