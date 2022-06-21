@@ -16,3 +16,17 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+
+/node_modules
+/public/hot
+/public/storage
+/public/js/app.js
+/public/js/ssr.js
+/public/css/app.css
+/storage/*.key
+/vendor
+.env.backup
+/.idea
+/.vscode
+.DS_Store
+
