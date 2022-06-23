@@ -23886,7 +23886,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"absolute w-screen h-screen flex justify-center items-center flex-col\"><div class=\"flex gap-3 text-3xl sm:text-5xl font-bold text-slate-700\"><div class=\"-translate-y-5\">Shannon</div><div>&amp;</div><div class=\"translate-y-5\">David</div></div><div class=\"mt-6 sm:mt-12 text-xl sm:text-3xl text-slate-500\"> ♥♥ Comming soon ♥♥ </div></div>", 1);
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"absolute w-screen h-screen flex justify-center items-center flex-col\"><div class=\"flex gap-3 text-3xl sm:text-5xl font-bold text-slate-700\"><div class=\"-translate-y-5\">Shannon</div><div>&amp;</div><div class=\"translate-y-5\">David</div></div><div class=\"mt-6 sm:mt-12 text-xl sm:text-3xl text-slate-500\"> ♥ Comming soon ♥ </div></div>", 1);
 
 var _hoisted_2 = ["src"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {

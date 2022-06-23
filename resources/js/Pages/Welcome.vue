@@ -20,7 +20,7 @@ defineProps({
             <div class="translate-y-5">David</div>
         </div>
         <div class="mt-6 sm:mt-12 text-xl sm:text-3xl text-slate-500">
-            ♥♥ Comming soon ♥♥
+            ♥ Comming soon ♥
         </div>
     </div>
     <img class="w-screen h-screen object-cover" :src="bg" alt="">
