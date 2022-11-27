@@ -31,29 +31,30 @@ setInterval(() => {
       src="/images/2395249.jpg"
       alt=""
     >
-    <div class="z-50 fixed right-4 top-0 bottom-0 flex flex-col justify-center gap-3">
-      <div class="w-5 h-5 border-4 rounded-full border-slate-800 bg-slate-800 ">
-        a
-      </div>
-      <div class="w-5 h-5 border-4 rounded-full border-slate-800">
-        a
-      </div>
-      <div class="w-5 h-5 border-4 rounded-full border-slate-800">
-        a
-      </div>
-      <div class="w-5 h-5 border-4 rounded-full border-slate-800">
-        a
-      </div>
-      <div class="w-5 h-5 border-4 rounded-full border-slate-800">
-        a
-      </div>
-    </div>
+    <!--    <div class="z-50 fixed right-4 top-0 bottom-0 flex flex-col justify-center gap-3">-->
+    <!--      <div class="w-5 h-5 border-4 rounded-full border-slate-800 bg-slate-800 ">-->
+    <!--        a-->
+    <!--      </div>-->
+    <!--      <div class="w-5 h-5 border-4 rounded-full border-slate-800">-->
+    <!--        a-->
+    <!--      </div>-->
+    <!--      <div class="w-5 h-5 border-4 rounded-full border-slate-800">-->
+    <!--        a-->
+    <!--      </div>-->
+    <!--      <div class="w-5 h-5 border-4 rounded-full border-slate-800">-->
+    <!--        a-->
+    <!--      </div>-->
+    <!--      <div class="w-5 h-5 border-4 rounded-full border-slate-800">-->
+    <!--        a-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--Hero-->
     <full-page
       id="hero"
       class="snap-center relative"
     >
       <h1 class="z-10">
-        Wir heiraten
+        Shannon & David
       </h1>
       <img
         class="hidden"
@@ -61,22 +62,23 @@ setInterval(() => {
         alt=""
       >
       <polaroid-card
-        class="absolute rotate-[32deg] top-[37%] right-[5%]"
+        class="absolute rotate-[32deg] top-[31%] right-[5%]"
         img-path="/images/d9e22d46-7536-486f-82dd-d3e1281d4c98.jpg"
       />
       <polaroid-card
-        class="absolute rotate-[16deg] top-[57%] right-[15%]"
+        class="absolute rotate-[16deg] top-[53%] right-[15%]"
         img-path="/images/cb712c88-fb57-423c-9779-014fdf8af9d4.JPG"
       />
       <polaroid-card
-        class="absolute rotate-[-32deg] top-[27%] left-[5%]"
+        class="absolute rotate-[-25deg] top-[27%] left-[5%]"
         img-path="/images/b574690a-7a30-45c2-8db1-4ad229cc2087.JPG"
       />
       <polaroid-card
-        class="absolute rotate-[-16deg] top-[7%] left-[15%]"
+        class="absolute rotate-[-9deg] top-[7%] left-[15%]"
         img-path="/images/8B995269-09BE-4A3C-A03C-C2C69A8D92B1.JPG"
       />
     </full-page>
+    <!--Countdown-->
     <full-page
       id="countdown"
       class="snap-center"
@@ -111,51 +113,43 @@ setInterval(() => {
         <h2>bis zur Trauung</h2>
       </div>
     </full-page>
-    <!--    <full-page class="snap-center">-->
-    <!--      <div class="rotate-12 -z-10 flex gap-6">-->
-    <!--        <div class="mt-20">-->
-    <!--          <img-->
-    <!--            class="w-[300px] h-[400px] object-cover object-top"-->
-    <!--            src="/images/8B995269-09BE-4A3C-A03C-C2C69A8D92B1.JPG"-->
-    <!--            alt=""-->
-    <!--          >-->
-    <!--          <img-->
-    <!--            class="w-[300px] h-[400px] object-cover object-top"-->
-    <!--            src="/images/d9e22d46-7536-486f-82dd-d3e1281d4c98.jpg"-->
-    <!--            alt=""-->
-    <!--          >-->
-    <!--          <img-->
-    <!--            class="w-[300px] h-[400px] object-cover object-top"-->
-    <!--            src="/images/cb712c88-fb57-423c-9779-014fdf8af9d4.JPG"-->
-    <!--            alt=""-->
-    <!--          >-->
-    <!--        </div>-->
-    <!--        <div>-->
-    <!--          <img-->
-    <!--            class="w-[300px] h-[400px] object-cover object-top"-->
-    <!--            src="/images/IMG_6377.JPG"-->
-    <!--            alt=""-->
-    <!--          >-->
-    <!--          <img-->
-    <!--            class="w-[300px] h-[400px] object-cover object-top"-->
-    <!--            src="/images/b574690a-7a30-45c2-8db1-4ad229cc2087.JPG"-->
-    <!--            alt=""-->
-    <!--          >-->
-    <!--          <img-->
-    <!--            class="w-[300px] h-[400px] object-cover object-top"-->
-    <!--            src="/images/2395249.jpg"-->
-    <!--            alt=""-->
-    <!--          >-->
-    <!--        </div>-->
-    <!--      </div>-->
-    <!--    </full-page>-->
-    <!--    <full-page-->
-    <!--      id="hero"-->
-    <!--      class="snap-center bg-cover"-->
-    <!--      style="background-image: url('/images/pexels-karolina-grabowska-4041317.jpg')"-->
-    <!--    >-->
-    <!--      dami-->
-    <!--    </full-page>-->
+    <!--Accept-->
+    <full-page
+      id="accept"
+      class="snap-center"
+    >
+      <h2>Seid ihr dabei? Hier könnt ihr Zu- oder Absagen</h2>
+      <div class="form-control w-1/2 flex flex-col gap-3">
+        <label class="label">
+          <span class="label-text font-bold text-3xl">E-Mail</span>
+          <input
+            class="input input-bordered font-mono w-1/2"
+            type="text"
+            placeholder="E-Mail"
+          >
+        </label>
+        <label class="label">
+          <span class="label-text font-bold text-3xl">Wir heißen</span>
+          <input
+            class="input input-bordered font-mono w-1/2"
+            type="text"
+            placeholder="Name"
+          >
+        </label>
+        <label class="label">
+          <span class="label-text font-bold text-3xl">Wir sind dabei</span>
+          <input
+            class="toggle toggle-lg"
+            type="checkbox"
+            checked
+          >
+        </label>
+        <button class="btn font-mono">
+          Speichern
+        </button>
+      </div>
+    </full-page>
+    <!--Drive-->
     <full-page
       id="drive"
       class="snap-center"
