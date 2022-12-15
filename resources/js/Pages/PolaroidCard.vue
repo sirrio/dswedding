@@ -6,7 +6,7 @@ defineProps({
 
 <template>
   <div
-    class="bg-white w-[400px] h-[400px] border shadow-md pb-12 pt-5 px-5"
+    class="hidden xl:block bg-white w-[400px] h-[400px] border shadow-md pb-12 pt-5 px-5"
   >
     <img
       class="object-cover w-full h-full"

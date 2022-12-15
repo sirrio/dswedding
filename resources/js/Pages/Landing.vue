@@ -4,10 +4,17 @@ import FullPage from '@/Pages/FullPage'
 import { intervalToDuration } from 'date-fns'
 import TimerComponent from '@/Pages/TimerComponent'
 import PolaroidCard from '@/Pages/PolaroidCard'
+import { useForm } from '@inertiajs/inertia-vue3'
 
 defineProps({
   canLogin: Boolean,
   canRegister: Boolean,
+})
+
+const form = useForm({
+  email: null,
+  name: null,
+  isAttending: true,
 })
 
 const weedingDate = new Date(2023, 7, 3, 14,)
@@ -25,7 +32,7 @@ setInterval(() => {
 </script>
 
 <template>
-  <div class="overflow-scroll h-screen snap-y snap-mandatory">
+  <div class="overflow-scroll h-screen snap-y snap-mandatory text-center">
     <img
       class="-z-10 fixed object-cover w-full h-full saturate-50"
       src="/images/2395249.jpg"
@@ -56,11 +63,6 @@ setInterval(() => {
       <h1 class="z-10">
         Shannon & David
       </h1>
-      <img
-        class="hidden"
-        src="/images/8B995269-09BE-4A3C-A03C-C2C69A8D92B1.JPG"
-        alt=""
-      >
       <polaroid-card
         class="absolute rotate-[32deg] top-[31%] right-[5%]"
         img-path="/images/d9e22d46-7536-486f-82dd-d3e1281d4c98.jpg"
@@ -86,13 +88,13 @@ setInterval(() => {
       <div>
         <h2>Nur noch</h2>
       </div>
-      <div class="flex gap-3">
+      <div class="flex gap-3 flex-wrap justify-center">
         <timer-component
           name="Monate"
           :data="delta.months"
         />
         <timer-component
-          class="mx-6"
+          class="xl:mx-6"
           name="Tage"
           :data="delta.days"
         />
@@ -118,36 +120,66 @@ setInterval(() => {
       id="accept"
       class="snap-center"
     >
-      <h2>Seid ihr dabei? Hier könnt ihr Zu- oder Absagen</h2>
-      <div class="form-control w-1/2 flex flex-col gap-3">
+      <h2>Bist du dabei? Hier kannst du Zu- oder Absagen</h2>
+      <form
+        class="form-control flex flex-col gap-3 w-full max-w-2xl"
+        @submit.prevent="form.post('/attendance')"
+      >
         <label class="label">
-          <span class="label-text font-bold text-3xl">E-Mail</span>
+          <span class="label-text font-bold text-2xl"> Deine E-Mail</span>
           <input
+            v-model="form.email"
             class="input input-bordered font-mono w-1/2"
-            type="text"
+            type="email"
+            required
             placeholder="E-Mail"
           >
         </label>
         <label class="label">
-          <span class="label-text font-bold text-3xl">Wir heißen</span>
+          <span class="label-text font-bold text-2xl">Dein Name</span>
           <input
+            v-model="form.name"
             class="input input-bordered font-mono w-1/2"
             type="text"
+            required
             placeholder="Name"
           >
         </label>
         <label class="label">
-          <span class="label-text font-bold text-3xl">Wir sind dabei</span>
+          <span
+            v-if="form.isAttending"
+            class="label-text font-bold text-2xl"
+          >
+            Ich bin dabei
+          </span>
+          <span
+            v-if="!form.isAttending"
+            class="label-text font-bold text-2xl"
+          >
+            Ich bin nicht dabei
+          </span>
           <input
-            class="toggle toggle-lg"
+            v-model="form.isAttending"
+            class="toggle toggle-lg toggle-success"
             type="checkbox"
             checked
           >
         </label>
-        <button class="btn font-mono">
+        <button
+          type="submit"
+          :disabled="form.processing"
+          class="btn font-mono"
+        >
           Speichern
         </button>
-      </div>
+        <span
+          v-if="$page.props.errors.email"
+          class="font-mono text-xs"
+        >
+          {{ $page.props.errors.email }}
+        </span>
+        <span class="font-mono text-xs">Bitte mehrmals ausfüllen bei mehreren Personen</span>
+      </form>
     </full-page>
     <!--Drive-->
     <full-page
