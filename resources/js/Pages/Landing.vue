@@ -14,6 +14,7 @@ defineProps({
 const form = useForm({
   email: null,
   name: null,
+  number: 1,
   isAttending: true,
 })
 
@@ -32,6 +33,34 @@ setInterval(() => {
 </script>
 
 <template>
+  <div
+    v-if="$page.props.flash.message"
+    class="fixed w-full p-6"
+  >
+    <div class="alert alert-success shadow-lg font-mono">
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="stroke-current flex-shrink-0 h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+        <span>{{ $page.props.flash.message }}</span>
+      </div>
+      <div class="flex-none">
+        <button @click="$page.props.flash.message = null">
+          x
+        </button>
+      </div>
+    </div>
+  </div>
   <div class="overflow-scroll h-screen snap-y snap-mandatory text-center">
     <img
       class="-z-10 fixed object-cover w-full h-full saturate-50"
@@ -120,13 +149,25 @@ setInterval(() => {
       id="accept"
       class="snap-center"
     >
-      <h2>Bist du dabei? Hier kannst du Zu- oder Absagen</h2>
+      <h2>Seid ihr dabei? Hier könnt Ihr Zu- oder Absagen</h2>
       <form
         class="form-control flex flex-col gap-3 w-full max-w-2xl"
         @submit.prevent="form.post('/attendance')"
       >
         <label class="label">
-          <span class="label-text font-bold text-2xl"> Deine E-Mail</span>
+          <div>
+            <span class="label-text font-bold  text-lg xl:text-2xl">Kontakt E-Mail</span>
+            <div
+              class="tooltip font-mono"
+              data-tip="Wir brauchen deine E-Mail, falls du später deine Entscheidung ändern möchtest. Außerdem kannst du mit der E-Mail später auf unser Gästebuch und unsere Fotobibliothek zugreifen."
+            >
+              <div
+                class="font-sans font-serif border-slate-700 inline-flex items-center justify-center rounded-full border w-5 h-5 ml-3"
+              >
+                ?
+              </div>
+            </div>
+          </div>
           <input
             v-model="form.email"
             class="input input-bordered font-mono w-1/2"
@@ -136,7 +177,7 @@ setInterval(() => {
           >
         </label>
         <label class="label">
-          <span class="label-text font-bold text-2xl">Dein Name</span>
+          <span class="label-text font-bold text-lg xl:text-2xl">Wie heißt ihr?</span>
           <input
             v-model="form.name"
             class="input input-bordered font-mono w-1/2"
@@ -146,17 +187,29 @@ setInterval(() => {
           >
         </label>
         <label class="label">
+          <span class="label-text font-bold  text-lg xl:text-2xl">Wie viele seid ihr?</span>
+          <input
+            v-model="form.number"
+            class="input input-bordered font-mono w-1/2"
+            type="number"
+            min="1"
+            max="8"
+            required
+            placeholder="Anzahl"
+          >
+        </label>
+        <label class="label">
           <span
             v-if="form.isAttending"
-            class="label-text font-bold text-2xl"
+            class="label-text font-bold  text-lg xl:text-2xl"
           >
-            Ich bin dabei
+            Wir sind dabei
           </span>
           <span
             v-if="!form.isAttending"
-            class="label-text font-bold text-2xl"
+            class="label-text font-bold  text-lg xl:text-2xl"
           >
-            Ich bin nicht dabei
+            Wir sind nicht dabei
           </span>
           <input
             v-model="form.isAttending"
@@ -178,7 +231,6 @@ setInterval(() => {
         >
           {{ $page.props.errors.email }}
         </span>
-        <span class="font-mono text-xs">Bitte mehrmals ausfüllen bei mehreren Personen</span>
       </form>
     </full-page>
     <!--Drive-->

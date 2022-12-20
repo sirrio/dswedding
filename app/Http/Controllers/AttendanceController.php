@@ -15,16 +15,19 @@ class AttendanceController extends Controller
     {
         $password = Str::random(12);
 
-        User::create(
+        $user = User::create(
             [
                 ...$request->validate([
                     'name' => 'required',
                     'email' => 'required|email|unique:users',
+                    'number' => 'required|integer|gt:0',
                     'isAttending' => 'required'
                 ]),
                 'password' => Hash::make($password)
             ]
         );
+
+        $request->session()->flash('message', 'Erfolgreich angemeldet!');
 
         Notification::route('mail', $request->email)->notify(new UserRegistered($password));
 
