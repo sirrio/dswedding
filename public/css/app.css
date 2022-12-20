@@ -33,7 +33,7 @@ html {
   -moz-tab-size: 4; /* 3 */
   -o-tab-size: 4;
      tab-size: 4; /* 3 */
-  font-family: Ms Madi, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
   font-feature-settings: normal; /* 5 */
 }
 
@@ -2598,24 +2598,6 @@ html {
 .btm-nav-lg>*:where(.active) {
   border-top-width: 4px;
 }
-.btn-sm {
-  height: 2rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  min-height: 2rem;
-  font-size: 0.875rem;
-}
-.btn-square:where(.btn-sm) {
-  height: 2rem;
-  width: 2rem;
-  padding: 0px;
-}
-.btn-circle:where(.btn-sm) {
-  height: 2rem;
-  width: 2rem;
-  border-radius: 9999px;
-  padding: 0px;
-}
 .toggle-lg {
   --handleoffset: 2rem;
   height: 2rem;
@@ -2785,12 +2767,6 @@ html {
 .block {
   display: block;
 }
-.inline-block {
-  display: inline-block;
-}
-.inline {
-  display: inline;
-}
 .flex {
   display: flex;
 }
@@ -2839,12 +2815,6 @@ html {
 .h-\[400px\] {
   height: 400px;
 }
-.h-3 {
-  height: 0.75rem;
-}
-.h-7 {
-  height: 1.75rem;
-}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -2883,15 +2853,6 @@ html {
 }
 .w-screen {
   width: 100vw;
-}
-.w-3 {
-  width: 0.75rem;
-}
-.w-7 {
-  width: 1.75rem;
-}
-.w-9\/12 {
-  width: 75%;
 }
 .max-w-xl {
   max-width: 36rem;
@@ -3177,10 +3138,6 @@ html {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -3229,13 +3186,13 @@ html {
   text-align: center;
 }
 .font-sans {
-  font-family: Ms Madi, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 .font-serif {
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: Ms Madi, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .text-sm {
   font-size: 0.875rem;
@@ -3253,14 +3210,6 @@ html {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -3268,6 +3217,10 @@ html {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 .font-medium {
   font-weight: 500;
@@ -3289,9 +3242,6 @@ html {
 }
 .leading-4 {
   line-height: 1rem;
-}
-.leading-tight {
-  line-height: 1.25;
 }
 .tracking-wider {
   letter-spacing: 0.05em;
@@ -3461,6 +3411,7 @@ body {
 }
 
 h1 {
+  font-family: Ms Madi, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 3rem;
   line-height: 1;
 }
@@ -3478,6 +3429,7 @@ h1 {
 }
 
 h2 {
+  font-family: Ms Madi, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
@@ -3805,8 +3757,9 @@ h2 {
     display: block;
   }
 
-  .xl\:pt-1 {
-    padding-top: 0.25rem;
+  .xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .xl\:text-7xl {
@@ -3817,11 +3770,6 @@ h2 {
   .xl\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
-  }
-
-  .xl\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 }
 

@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Ms Madi', ...defaultTheme.fontFamily.sans],
+        serif: ['Ms Madi', ...defaultTheme.fontFamily.sans],
       },
     },
   },

@@ -21,12 +21,14 @@ body {
 }
 
 h1 {
+    @apply font-serif;
     @apply text-5xl;
     @apply xl:text-7xl;
     @apply font-bold;
 }
 
 h2 {
+    @apply font-serif;
     @apply text-4xl;
     @apply xl:text-6xl;
     @apply font-bold;

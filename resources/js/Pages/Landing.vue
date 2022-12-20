@@ -155,17 +155,25 @@ setInterval(() => {
         @submit.prevent="form.post('/attendance')"
       >
         <label class="label">
-          <div>
-            <span class="label-text font-bold  text-lg xl:text-2xl">Kontakt E-Mail</span>
+          <div class="flex">
+            <span class="label-text font-bold font-serif text-lg xl:text-2xl">Kontakt E-Mail</span>
             <div
-              class="tooltip font-mono"
+              class="tooltip font-mono ml-3"
               data-tip="Wir brauchen deine E-Mail, falls du später deine Entscheidung ändern möchtest. Außerdem kannst du mit der E-Mail später auf unser Gästebuch und unsere Fotobibliothek zugreifen."
             >
-              <div
-                class="font-sans font-serif border-slate-700 inline-flex items-center justify-center rounded-full border w-5 h-5 ml-3"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="stroke-current flex-shrink-0 w-6 h-6"
               >
-                ?
-              </div>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
             </div>
           </div>
           <input
@@ -177,7 +185,7 @@ setInterval(() => {
           >
         </label>
         <label class="label">
-          <span class="label-text font-bold text-lg xl:text-2xl">Wie heißt ihr?</span>
+          <span class="label-text font-serif font-bold text-lg xl:text-2xl">Wie heißt ihr?</span>
           <input
             v-model="form.name"
             class="input input-bordered font-mono w-1/2"
@@ -187,7 +195,7 @@ setInterval(() => {
           >
         </label>
         <label class="label">
-          <span class="label-text font-bold  text-lg xl:text-2xl">Wie viele seid ihr?</span>
+          <span class="label-text font-serif font-bold  text-lg xl:text-2xl">Wie viele seid ihr?</span>
           <input
             v-model="form.number"
             class="input input-bordered font-mono w-1/2"
@@ -201,13 +209,13 @@ setInterval(() => {
         <label class="label">
           <span
             v-if="form.isAttending"
-            class="label-text font-bold  text-lg xl:text-2xl"
+            class="label-text font-serif font-bold  text-lg xl:text-2xl"
           >
             Wir sind dabei
           </span>
           <span
             v-if="!form.isAttending"
-            class="label-text font-bold  text-lg xl:text-2xl"
+            class="label-text font-serif font-bold  text-lg xl:text-2xl"
           >
             Wir sind nicht dabei
           </span>

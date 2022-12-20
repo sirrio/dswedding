@@ -24,7 +24,7 @@ defineProps(['users'])
           <td>{{ user.number }} Person(en)</td>
           <td>{{ user.isAttending === 1 ? 'nimmt Teil' : 'nimmt nicht Teil' }}</td>
         </tr>
-      </tbody>>
+      </tbody>
     </table>
   </div>
 </template>
