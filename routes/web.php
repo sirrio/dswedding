@@ -33,4 +33,6 @@ Route::get('/dashboard', function () {
     ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/gallery', [\App\Http\Controllers\GalleryController::class, 'show'])->name('gallery');
+
 require __DIR__ . '/auth.php';
